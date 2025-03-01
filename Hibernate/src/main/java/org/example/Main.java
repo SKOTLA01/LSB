@@ -8,8 +8,8 @@ import org.hibernate.cfg.Configuration;
 public class Main {
     public static void main(String[] args) {
     Student s1=new Student();
-        s1.setName("saiteja");
-        s1.setRoll(107);
+        s1.setName("Sunil");
+        s1.setRoll(114);
         s1.setAge(23);
 
       Configuration config= new Configuration();
