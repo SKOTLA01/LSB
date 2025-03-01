@@ -14,10 +14,12 @@ public class Main {
         System.out.println("Connection established ");
         // create statement
         Statement st=conn.createStatement();
-        String query="select * from student where sid=107";
+        String query="select * from student ";
         ResultSet rs=st.executeQuery(query);
-        rs.next();
-        System.out.println("Roll NO" + rs.getString(1)+"  Sname: "+rs.getString(2));
+        ;
+        while (rs.next()){
+            System.out.println("Roll NO" + rs.getString(1)+"  Sname: "+rs.getString(2));
+        }
         conn.close();
         System.out.println("Connection Closed ");
         // execute statement
