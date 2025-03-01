@@ -6,6 +6,17 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class Main {
+    public static void InsertDate(Student obj,Session session){
+
+        Transaction transaction=session.beginTransaction();
+//        session.save(s1);
+        session.persist(obj);
+        transaction.commit();
+    }
+    public static  void fetchData(Session session,int roll){
+        Student s2=session.get(Student.class,roll);
+        System.out.println(s2);
+    }
     public static void main(String[] args) {
     Student s1=new Student();
         s1.setName("Sunil");
@@ -17,11 +28,10 @@ public class Main {
       config.configure();
         SessionFactory sf=config.buildSessionFactory();
         Session session =sf.openSession();
-
-        Transaction transaction=session.beginTransaction();
-        session.save(s1);
-        transaction.commit();
-
+        // InsertDate(s1,session);
+    fetchData(session,107);
+        session.close();
+    sf.close();
 
     }
 }
