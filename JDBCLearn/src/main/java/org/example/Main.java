@@ -19,6 +19,7 @@ public class Main {
         rs.next();
         System.out.println("Roll NO" + rs.getString(1)+"  Sname: "+rs.getString(2));
         conn.close();
+        System.out.println("Connection Closed ");
         // execute statement
         // close;
 
