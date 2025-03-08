@@ -3,6 +3,12 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- bean definitions here -->
-    <bean id="alien" class="org.example.Alien"></bean>
+    <!-- bean definitions here --><![CDATA[
+    ]]><bean id="alien" class="org.example.Alien" scope="prototype">
+    <property name="age" value="21">
+    </property>
+    <property name="lap" ref="Laptop"></property>
+</bean>
+    <bean id="Laptop" class="org.example.Laptop" scope="prototype">
+    </bean>
 </beans>
