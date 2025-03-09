@@ -5,8 +5,10 @@
 
     <!-- bean definitions here --><![CDATA[
     ]]><bean id="alien" class="org.example.Alien" scope="prototype">
-    <property name="age" value="21">
-    </property>
+<!--    <property name="age" value="21">-->
+<!--    </property>-->
+    <constructor-arg value="21" index="0" name="age"></constructor-arg>
+
     <property name="lap" ref="Laptop"></property>
 </bean>
     <bean id="Laptop" class="org.example.Laptop" scope="prototype">

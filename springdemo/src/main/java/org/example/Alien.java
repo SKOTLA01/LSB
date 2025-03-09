@@ -1,8 +1,16 @@
 package org.example;
 
+import java.beans.ConstructorProperties;
+
 public class Alien {
     private int age;
     private  Laptop lap;
+    @ConstructorProperties("age")
+    public Alien(int age){
+
+        this.age=age;
+    }
+
     public int getAge() {
         return age;
     }
